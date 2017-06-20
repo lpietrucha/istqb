@@ -1,0 +1,63 @@
+
+1. Pozycja menu "Utwórz wiadomość": uruchomienie na każdej z podstron, gdzie występują inne skrypty JavaScript tj. widok folderów, książka adresowa, zarządzanie grupami, zarządzanie zmianami, użytkownicy, network monitor, email2sms, sms2email, przekierowanie sms, cykliczny sms, wejscia/wyjscia cyfrowe
+Test przechodzi jeśli: wyświetlenie okna dialogowego "Utwórz wiadomość"
+
+
+2. Użytkownicy: dodanie użytkownika poprzez formularz
+Test przechodzi jeśli: wyświetlenie na liście nowego użytkownika z poprawnymi danymi
+
+
+3. Książka adresowa: dodanie kontaktu poprzez formularz, dopisanie do grupy oraz zmiany
+Test przechodzi jeśli: pomyślne dodanie kontaktu do tabeli pbk, stworzone relacje w tabeli user_group, shift_group.
+
+
+4. Książka adresowa: usunięcie kontaktu
+Test przechodzi jeśli: usunięcie kontaktu z widoku
+
+
+5. Moje foldery: utworzenie folderu poprzez formularz z okienka po wciśnięciu przycisku "dodaj", przeniesienie wiadomości z folderów "skrzynka odbiorcza", "elementy wysłane" poprzez zaznaczenie ich na liście, kliknięcie "przenieś do" i wybranie nowo utworzonego folderu.
+Test przechodzi jeśli: wybrane wiadomości powinny pojawić się w widoku nowo utworzonego folderu w zakładkach "skrzynka odbiorcza" oraz "elementy wysłane", w tabeli "inbox" oraz "sentitems" id_folder powinno zmienić się na id utworzonego folderu
+
+
+6. Wejścia / Wyjścia cyfrowe: edycja ustawień jednego z wejść, następnie jednego z wyjść.
+Test przechodzi jeśli: otwarcie okienek z odpowiednio uzupełnionymi polami dla danych typów.
+
+
+7. Wejścia / Wyjścia cyfrowe:
+a)	Dodanie testowego kontaktu do książki adresowej.
+b)	Dodanie reguły do wyjść cyfrowych - ustawienie dla wszystkich wiadomości przychodzących, ustawienie sygnału na wybranym wyjściu innego niż jest obecnie, aby móc zaobserwować zmianę.
+c)	Symulacja odbioru SMSa: dodanie wiadomości przychodzącej do tabeli inbox - przykładowa kwerenda:
+
+	INSERT INTO "inbox" ("UpdatedInDB", "ReceivingDateTime", "Text", "SenderNumber", "Coding", "UDH", "SMSCNumber", "Class", "TextDecoded", "ID", "RecipientID", "Processed", "id_folder", "readed", "last_reply", "oid") VALUES ('2017-04-01 12:00:00', '2017-04-01 12:00:00', '005400650073007400200032', '+48123456789', 'Default_No_Compression', '', '+48790998250', -1, 'WIADOMOSC', DEFAULT, '', 'true', 1, 'false', NULL, NULL);
+
+	gdzie SenderNumber = numer nadawcy, TextDecoded = treść wiadomości
+
+d)	uruchomienie zapytania GET pod adresem http://URZĄDZENIE/index.php/daemon/message_routine/
+e)	Sprawdzenie, czy ustawiona reguła dla danego portu zostanie zmieniona (odświeżenie może trwać do minuty).
+
+
+8. Wejścia / Wyjścia cyfrowe:
+a)	Edycja reguły - ustawienie sygnału na przeciwny, zmiana reguły na "Od określonych nadawców", wybranie wcześniej dodanego nadawcy z książki.
+b) 	Symulacja odbioru SMSa, który nie spełnia założeń - sygnał nie powinien zostać zmieniony.
+c) 	Symulacja odbioru SMSa, który spełnia warunki - sygnał powinien zostać zmieniony.
+
+
+9. Przekierowanie SMS:
+a)	Dodanie reguły przekierowania dla wszystkich wiadomości przychodzących
+b)	Symulacja odbioru SMSa.
+c)	Kopia wiadomości powinna pojawić się w folderze Outbox
+d)	Edycja reguły i sprawdzenie wszystkich kombinacji "kiedy numer nadawcy zawiera", "kiedy tekst wiadomości zawiera" z wywołaniem symulacji SMSa przychodzącego.
+e)	Dodanie kolejnej reguły i sprawdzenie działaniu obu jednocześnie w różnych kombinacjach tj.: obie nie spełniają warunku, jedna spełnia, obie nie spełniają.
+
+
+10. Autoreply:
+a)	Ustawienie autoodpowiedzi na "tak".
+b)	Wywołanie symulacji odbioru SMSa.
+c)	Sprawdzenie czy odpowiedź znajduje się w tabeli outbox lub po wysłaniu sentitems.
+
+
+11. Network Monitor: uruchomienie formularza dodwania nowego zadania, zaznaczenie checkboxów przy "SMS sent when"
+Test przechodzi jeśli: pojawianie się / znikanie elementów formularza związanych z wybranymi opcjami
+
+
+
