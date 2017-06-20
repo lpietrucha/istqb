@@ -1,4 +1,4 @@
-﻿
+
 1. Pozycja menu "Utwórz wiadomość": uruchomienie na każdej z podstron, gdzie występują inne skrypty JavaScript tj. widok folderów, książka adresowa, zarządzanie grupami, zarządzanie zmianami, użytkownicy, network monitor, email2sms, sms2email, przekierowanie sms, cykliczny sms, wejscia/wyjscia cyfrowe
 Test przechodzi jeśli: wyświetlenie okna dialogowego "Utwórz wiadomość"
 
@@ -60,4 +60,30 @@ c)	Sprawdzenie czy odpowiedź znajduje się w tabeli outbox lub po wysłaniu sen
 Test przechodzi jeśli: pojawianie się / znikanie elementów formularza związanych z wybranymi opcjami
 
 ################################################
+
+       /_ \_.--"""--._/ _\
+       \ )   _     _   ( /
+        |   (o)___(o)   |
+        |      \_/      |
+        \       |       /
+         \     <Y>     /
+          \_    _    _/
+         ___)==( )==(___  
+       /'      //\      `\
+      /       // \\       \
+     /   |   |/   \|   |   \
+    /,_ /|             |\ _,\
+   ((_// |             | \\_))
+    `-'  |             |  `-'
+         |             |
+         |             |
+         |      _      |
+        /      / \      \
+   jgs /      /   \      \
+      /      /     \      \
+    _/      /       \      \_
+   ( _____ /         \ _____ )
+    '-----'           `-----'
+
+
 
