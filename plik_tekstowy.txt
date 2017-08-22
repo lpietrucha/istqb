@@ -37,3 +37,27 @@ Online Resources
 * PyPI -       http://pypi.python.org/pypi/passlib
 * Downloads -  http://code.google.com/p/passlib/downloads
 * Source -     http://code.google.com/p/passlib/source
+
+
+
+          ,-~-. _.---._ ,-~-.
+         / .- ,'       `. -. \
+         \ ` /`        ' \ ' /
+          `-/   'a___a`   \-'
+            |   ,'(_)`.   |
+            \  ( ._|_. )  /
+             \  `.___,'  /
+            .-`._     _,'-.
+          ,'  ,' `---' `.  `.
+         /   /     :     \   \
+       ,'   /      :      \   `.
+     ,'     |      :      |     `.
+    |     ,'|      :      |`.     |
+    `.__,' .-\     :     /-. `.__,'
+          /   `.   :   ,'   \
+   .""-.,'      `._:_,'      `.,-"".
+  / ,-. `         ) (         ' ,-. \
+ ( (   `.       ,'   `.       ,'   ) )
+  \ \    \   _,'       `._   / hjw/ /
+   `.`._,'  /             \  `._,','
+     `.__.-'               `-.__,'
