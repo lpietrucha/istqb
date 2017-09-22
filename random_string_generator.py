@@ -1,3 +1,4 @@
+pierwszy
 '''
 Created on 24 kwi 2017
 
