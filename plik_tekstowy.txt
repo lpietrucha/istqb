@@ -1,15 +1,19 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 teeest.. -*- restructuredtext -*-
 =======
 pierwszy
+=======
+sdfsdfsdpierwszy
+>>>>>>> 12d8a317c3fff78991bb055508f4ef7fbb60af4c
 .. -*- restructuredtext -*-
 >>>>>>> 11f1435929aa6ed0062a5ea3998314358e3bb05d
 
 
 ==========================
-The Passlib Python Library TEST DOPISANEGO CZEGOŒ :):):)
+The Passlib Python Library TEST DOPISANEGO CZEGOŒ :):):)asdasdsad
 ==========================
 
 Welcome
