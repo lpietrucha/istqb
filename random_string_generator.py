@@ -1,5 +1,5 @@
 '''
-Created on 24 kwi 2017
+Created on 30 cze 2017
 
 @author: Agnieszka Galeza
 '''
